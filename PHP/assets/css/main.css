@@ -1,0 +1,44 @@
+body {
+  text-align: center;
+  margin: 0px;
+  width: 100%;
+  background-color: white;
+  color: darkgrey;
+  font-family: "Arial Narrow", sans-serif; }
+
+h1, h2, h3, h4, h4, h5 {
+  margin: 0px;
+  padding: 0px;
+  color: black; }
+
+div {
+  margin: 10px;
+  border: 2px solid blue; }
+
+header, .content, footer {
+  border: 6px solid red;
+  margin: 10px 0px 10px 0px; }
+
+header .uppercontent {
+  border: 3px solid blue;
+  display: flex; }
+  header .uppercontent .language {
+    border-color: orange; }
+header .lowercontent {
+  padding: 10px;
+  display: flex;
+  border: 3px solid blue;
+  justify-content: space-between; }
+  header .lowercontent .logo {
+    display: inline-flex;
+    border-color: orange; }
+  header .lowercontent .nav {
+    display: run-in;
+    border-color: orange; }
+    header .lowercontent .nav li {
+      display: inline-block; }
+
+.content .mainheader, .content .subcontent {
+  border: 2px solid blue; }
+
+/*# sourceMappingURL=main.css.map */
