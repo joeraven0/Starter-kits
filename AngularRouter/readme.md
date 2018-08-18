@@ -1,1 +1,1 @@
-#A completely empty starter with routing pages using Angular and animation
+# An empty starter with routing pages using Angular and animation
