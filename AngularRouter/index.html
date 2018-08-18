@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="sv-SE">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--CSS-->		
+		<link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" href="style.css">
+		
+		<!--jQuery-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<!--Bootstrap-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+		<!--Angular-->
+	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular-route.js"></script>
+	    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular-animate.js"></script>
+	    <script src="app.js"></script>
+</head>
+<body ng-app="animateApp">
+
+    <!-- inject our views using ng-view -->
+    <!-- each angular controller applies a different class here -->
+<div ng-style="{'top':'0', 'z-index':'99', 'position':'absolute'}"><a href="#" >Main</a>
+<a href="#!/first-page" >First-page</a>
+<a href="#!/second-page" >Second-page</a>
+</div>
+    <ng-view class="page {{ pageClass }}" ng-style="{'background-color':'white'}"></ng-view>
+    	 
+
+</body>
+</html>
