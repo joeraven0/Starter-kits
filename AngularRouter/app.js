@@ -36,17 +36,17 @@ angular.module('amarApp', ['ngRoute', 'ngAnimate'])
 })
 
 // CONTROLLERS ============================================
-// home page controller
+// Main-page controller
 .controller('main-page-controller', function($scope) {
     $scope.pageClass = 'main-page';
 })
 
-// about page controller
+// First-page controller
 .controller('first-page-controller', function($scope) {
     $scope.pageClass = 'first-page';
 })
 
-// contact page controller
+// Second-page controller
 .controller('second-page-controller', function($scope) {
     $scope.pageClass = 'second-page';
 })
@@ -59,6 +59,7 @@ angular.module('amarApp', ['ngRoute', 'ngAnimate'])
         {source:'second-page',title:'Second-page'}
     ];
 
+    //Nav menu .active class
     $scope.activePath = null;
     $scope.$on('$routeChangeSuccess', function(){
     $scope.activePath = $location.path();
