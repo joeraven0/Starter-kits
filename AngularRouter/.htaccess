@@ -1,0 +1,10 @@
+
+
+Redirect /amarangular/first-page /amarangular/#!/first-page
+Redirect /amarangular/second-page /amarangular/#!/second-page
+
+ErrorDocument 404 /amarangular/
+ErrorDocument 401 /amarangular/
+ErrorDocument 403 /amarangular/
+ErrorDocument 500 /amarangular/
+
