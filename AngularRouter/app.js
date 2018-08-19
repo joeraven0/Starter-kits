@@ -1,33 +1,35 @@
 // app.js
 
 // define our application and pull in ngRoute and ngAnimate
-angular.module('animateApp', ['ngRoute', 'ngAnimate'])
+var app=angular.module('animateApp', ['ngRoute', 'ngAnimate']);
 
 // ROUTING ===============================================
 // set our routing for this application
 // each route will pull in a different controller
-.config(function($routeProvider) {
+app.config(function($routeProvider,$locationProvider) {
 
     $routeProvider
 
         // home page
         .when('/', {
-            templateUrl: './pages/main-page.htm',
+            templateUrl: 'pages/main-page.htm',
             controller: 'main-page-controller'
         })
 
         // about page
         .when('/first-page', {
-            templateUrl: './pages/first-page.htm',
+            templateUrl: 'pages/first-page.htm',
             controller: 'first-page-controller'
         })
 
         // contact page
         .when('/second-page', {
-            templateUrl: './pages/second-page.htm',
+            templateUrl: 'pages/second-page.htm',
             controller: 'second-page-controller'
         });
 
+        $locationProvider.html5Mode(true);
+        $locationProvider.hashPrefix('!');
 })
 
 // CONTROLLERS ============================================
