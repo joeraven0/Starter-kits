@@ -23,11 +23,15 @@
 		<base href="/amarangular/">
 	</head>
 	<body ng-app="amarApp">
-		<div ng-style="{'top':'0', 'z-index':'99', 'position':'absolute'}">
-			<a href=" " >Main</a>
-			<a href="first-page" >First-page</a>
-			<a href="second-page" >Second-page</a>
-		</div>
+		
+		
+		
+		
+		<nav  class="p-0 navbar navbar-expand-lg navbar-light bg-dark justify-content-between" ng-controller="nav" ng-style="{'top':'0', 'z-index':'99', 'position':'absolute'}">
+				<a ng-class="{ active: activePath=='/{{ link.source }}' }" class="navbar-brand p-2 m-0 text-light" ng-repeat="link in links" href="{{ link.source }}">{{link.title}}</a>			
+		</nav>
+		
 		<ng-view class="page {{ pageClass }}" ng-style="{'background-color':'white'}"></ng-view>
+		<h1>{{ pageClass }}</h1>
 	</body>
 </html>

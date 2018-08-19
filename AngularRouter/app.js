@@ -26,7 +26,10 @@ angular.module('amarApp', ['ngRoute', 'ngAnimate'])
         .when('/second-page', {
             templateUrl: 'pages/second-page.htm',
             controller: 'second-page-controller'
-        });
+        })
+        .otherwise({
+          redirectTo: '/'
+      });
 
         $locationProvider.html5Mode(true);
         $locationProvider.hashPrefix('!');
@@ -46,4 +49,21 @@ angular.module('amarApp', ['ngRoute', 'ngAnimate'])
 // contact page controller
 .controller('second-page-controller', function($scope) {
     $scope.pageClass = 'second-page';
+})
+// Nav menu
+.controller('nav', function($scope, $location, $route) {
+
+    $scope.links = [
+        {source:'',title:'Main'},
+        {source:'first-page',title:'First-page'},
+        {source:'second-page',title:'Second-page'}
+    ];
+
+    $scope.activePath = null;
+    $scope.$on('$routeChangeSuccess', function(){
+    $scope.activePath = $location.path();
+  });
+
 });
+
+

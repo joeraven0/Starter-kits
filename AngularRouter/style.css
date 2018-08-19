@@ -16,7 +16,7 @@
 .page h1    { font-size:60px; }
 .page a     { margin-top:50px; }
 
-
+.active { background-color: grey; }
 /* ANIMATIONS
 ============================================================================= */
 @keyframes rotateFall {
