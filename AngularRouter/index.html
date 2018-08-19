@@ -19,19 +19,22 @@
 
 		<!--Angular-->
 	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
-	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular-route.js"></script>
 	    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular-animate.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular-route.js"></script>
+	    
 	    <script src="app.js"></script>
+<base href="/amarangular/">
 </head>
-<body ng-app="animateApp">
+<body ng-app="amarApp">
 
     <!-- inject our views using ng-view -->
     <!-- each angular controller applies a different class here -->
-<div ng-style="{'top':'0', 'z-index':'99', 'position':'absolute'}"><a href="#" >Main</a>
-<a href="#!/first-page" >First-page</a>
-<a href="#!/second-page" >Second-page</a>
+<div ng-style="{'top':'0', 'z-index':'99', 'position':'absolute'}"><a href=" " >Main</a>
+<a href="first-page" >First-page</a>
+<a href="second-page" >Second-page</a>
+
 </div>
-    <ng-view class="page {{ pageClass }}" ng-style="{'background-color':'white'}"></ng-view>
+    <ng-view class="page {{ pageClass }}"></ng-view>
     	 
 
 </body>

@@ -1,12 +1,12 @@
 // app.js
 
 // define our application and pull in ngRoute and ngAnimate
-var app=angular.module('animateApp', ['ngRoute', 'ngAnimate']);
+angular.module('amarApp', ['ngRoute', 'ngAnimate'])
 
 // ROUTING ===============================================
 // set our routing for this application
 // each route will pull in a different controller
-app.config(function($routeProvider,$locationProvider) {
+.config(function($routeProvider,$locationProvider) {
 
     $routeProvider
 
