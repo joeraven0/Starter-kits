@@ -60,10 +60,10 @@ angular.module('amarApp', ['ngRoute', 'ngAnimate'])
     ];
 
     //Nav menu .active class
-    $scope.activePath = null;
-    $scope.$on('$routeChangeSuccess', function(){
-    $scope.activePath = $location.path();
-  });
+    $scope.isActive = function (viewLocation) {
+    var active = (viewLocation === $location.path());
+    return active;
+    };
 
 });
 
