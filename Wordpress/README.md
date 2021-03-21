@@ -4,3 +4,53 @@ SQL, PHP, CSS, SASS, Wordpress & JavaScript.
 
 > 1. Guide code for wordpress starter code    https://blog.templatetoaster.com/create-wordpress-theme-scratch/
 > 2. DevTips JEKYLL starter kit               https://github.com/DevTips/DevTips-Starter-Kit/tree/Jekyll-Starter-Kit 
+
+
+```
+1. Skapa ny style.css i main-mappen
+2. Lägg till
+/*
+Theme Name: Start WordPress
+Author: Joakim Ringstad
+Description: Page converted to WP-theme
+Version: 0.0.1
+Tags: notags
+*/
+
+3. Stylesheet
+<link href="<?php echo get_bloginfo('template_directory'); ?>/assets/css/main.css" rel="stylesheet">
+
+4. 
+<?php wp_head();?>
+</head>
+
+5.
+</footer>
+<?php wp_footer(); ?> 
+</body>
+
+6.
+Titel, ex AK-Trans
+<?php echo get_bloginfo( 'name' ); ?>
+
+Description, ex körning på Amager
+<?php echo get_bloginfo( 'description' ); ?>
+
+7.
+The loop
+  <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+  <div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+    <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+    <?php the_content(); ?>
+  </div>
+  <?php endwhile; ?>
+  <div class="navigation">
+    <div class="next-posts"><?php next_posts_link(); ?></div>
+    <div class="prev-posts"><?php previous_posts_link(); ?></div>
+  </div>
+  <?php else : ?>
+  <div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+    <h1>Not Found</h1>
+  </div>
+  <?php endif; ?>
+```
